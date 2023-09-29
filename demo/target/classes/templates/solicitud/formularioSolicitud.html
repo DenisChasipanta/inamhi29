@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOLICITUD DE EQUIPOS TIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container mt-3">
+<form th:action="@{/solicitud/formulario}" method="post" th:object="${solicitudes}">
+    <div class="mb-3 mt-3">
+        <label >NÚMERO DECÓDIGO:</label>
+        <input type="number" class="form-control"  placeholder="" th:field="*{numRegistro}" readonly="readonly">
+    </div>
+    <div class="mb-3">
+        <label >CODIGO:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{codigo}">
+    </div>
+    <div class="mb-3">
+        <label >NOMBRE DEL FUNCIONARIO:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{funcionario}">
+    </div>
+    <div class="mb-3">
+        <label >DIRECCION/UNIDAD:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{direccion}">
+    </div>
+    <div class="mb-3">
+        <label >E-MAIL:</label>
+        <input type="email" class="form-control" placeholder="" th:field="*{email}">
+    </div>
+    <div class="mb-3">
+        <label >TIPO DE REGISTRO:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{registro}">
+    </div>
+    <div class="mb-3">
+        <label >FECHA:</label>
+        <input type="date" class="form-control" placeholder="" th:field="*{fecha}">
+    </div>
+    <div class="mb-3">
+        <label >TIPO DE EQUIPO:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{equipo}">
+    </div>
+    <div class="mb-3">
+        <label >SISTEMA OPERATIVO:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{sistemaOperativo}">
+    </div>
+    <div class="mb-3">
+        <label >PROCESADOR:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{procesador}">
+    </div>
+    <div class="mb-3">
+        <label >TIPO DE DISCO:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{disco}">
+    </div>
+    <div class="mb-3">
+        <label >RAM:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{ram}">
+    </div>
+    <div class="mb-3">
+        <label >CAPACIDAD DISCO:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{capacidad}">
+    </div>
+    <div class="mb-3">
+        <label >Disco Duro/SSD:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{marca}">
+    </div>
+    <div class="mb-3">
+        <label >CASE:</label>
+        <input type="text" class="form-control" placeholder="" th:field="*{marcaCase}">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</body>
+</html>
